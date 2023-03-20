@@ -6,4 +6,5 @@ Fixed bugs of fail deploying on AWS Amplify. Solution:
 ```
 npm add typescript@4.9.5
 npm install
-```# frontend-cli
+```
+
