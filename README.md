@@ -8,3 +8,6 @@ npm add typescript@4.9.5
 npm install
 ```
 
+###2023/3/25
+
+Fixed bugs of issues about data structure when posting data as body.
