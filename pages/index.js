@@ -8,23 +8,25 @@ const inter = Inter({ subsets: ['latin'] })
 function depolywebsite(){
 
   const name = document.querySelector('#domain_name_input').value
+  console.log(name)
 
-  fetch('https://63knpdfhra.execute-api.ap-southeast-2.amazonaws.com/test/record', {
+  fetch('https://63knpdfhra.execute-api.ap-southeast-2.amazonaws.com/test/record/', {
     method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: {
+    body: JSON.stringify({
       "domain_name": name
-    }
+    }),
+    headers: {
+      "Accept": "*/*",
+      "Content-Type": "application/json",
+    },
   })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 }
 
 function dumpCSSText(element){
